@@ -10,9 +10,11 @@ Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.8/%{name}-%{version}.t
 Patch0:		%{name}-locale_names.patch
 Patch1:		%{name}-nuvola.patch
 URL:		http://www.gnome.org/
+BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 2.2.0
 BuildRequires:	intltool >= 0.25
+BuildRequires:	libtool
 Requires:	gnome-icon-theme
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
