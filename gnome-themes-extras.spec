@@ -8,7 +8,7 @@ Group:		Themes
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.3/%{name}-%{version}.tar.bz2
 # Source0-md5:	2e0dc1ef5b506e393536f5ef57e95b6d
 Patch0:		%{name}-DESTDIR.patch
-Patch1:		%{name}-Golrilla.patch
+Patch1:		%{name}-Gorilla.patch
 URL:		http://www.gnome.org/
 BuildRequires:	gtk+2-devel >= 2.0.0
 BuildRequires:	intltool >= 0.25
