@@ -16,7 +16,7 @@
  
  
 -ALL_LINGUAS="az ca cs da de el en_GB es fr hr he it ja ko lt nl no pa pl pt sk sq sr sr@Latn sv tr zh_CN zh_TW"
-+ALL_LINGUAS="az ca cs da de el en_GB es fr hr he it ja ko lt mb nl pa pl pt sk sq sr sr@Latn sv tr zh_CN zh_TW"
++ALL_LINGUAS="az ca cs da de el en_GB es fr hr he it ja ko lt nb nl pa pl pt sk sq sr sr@Latn sv tr zh_CN zh_TW"
  
  
  for ac_header in locale.h
