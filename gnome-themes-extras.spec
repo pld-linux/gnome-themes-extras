@@ -1,18 +1,15 @@
-# TODO:
-# - separate Gorilla theme and make it R: ximian-artwork (or engine industrial)
 Summary:	Extra themes for GNOME 2 enviroment
 Summary(pl):	Dodatkowe motywy dla ¶rodowiska GNOME 2
 Name:		gnome-themes-extras
-Version:	0.5
+Version:	0.6
 Release:	1
 License:	GPL
 Group:		Themes
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.5/%{name}-%{version}.tar.bz2
-# Source0-md5:	8b4d38fad00689131cc1fd2b50612cc8
-Patch1:		%{name}-Gorilla.patch
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.6/%{name}-%{version}.tar.bz2
+# Source0-md5:	3f52f75d013bab11c5c17bc1d3465037
 URL:		http://www.gnome.org/
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel >= 2.0.0
+BuildRequires:	gtk+2-devel >= 2.2.0
 BuildRequires:	intltool >= 0.25
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -22,9 +19,69 @@ This package contains a set of extra themes for the GNOME 2 desktop.
 %description -l pl
 Pakiet zawiera zestaw dodatkowych motywów dla ¶rodowiska GNOME 2.
 
+%package Amaranth
+Summary:	Amaranth theme for GNOME 2 enviroment
+Summary(pl):	Motyw Amaranth dla ¶rodowiska GNOME 2
+Group:		Themes
+Requires:	%{name} = %{version}
+
+%description Amaranth
+Amaranth theme for GNOME 2 enviroment.
+
+%description Amaranth -l pl
+Motyw Amaranth dla ¶rodowiska GNOME 2.
+
+%package Gorilla
+Summary:	Gorilla theme for GNOME 2 enviroment
+Summary(pl):	Motyw Gorilla dla ¶rodowiska GNOME 2
+Group:		Themes
+Requires:	%{name} = %{version}
+Requires:	ximian-artwork
+
+%description Gorilla
+Gorilla theme for GNOME 2 enviroment.
+
+%description Gorilla -l pl
+Motyw Gorilla dla ¶rodowiska GNOME 2.
+
+%package Lush
+Summary:	Lush theme for GNOME 2 enviroment
+Summary(pl):	Motyw Lush dla ¶rodowiska GNOME 2
+Group:		Themes
+Requires:	%{name} = %{version}
+
+%description Lush
+Lush theme for GNOME 2 enviroment.
+
+%description Lush -l pl
+Motyw Lush dla ¶rodowiska GNOME 2.
+
+%package Nuvola
+Summary:	Nuvola theme for GNOME 2 enviroment
+Summary(pl):	Motyw Nuvola dla ¶rodowiska GNOME 2
+Group:		Themes
+Requires:	%{name} = %{version}
+
+%description Nuvola
+Nuvola theme for GNOME 2 enviroment.
+
+%description Nuvola -l pl
+Motyw Nuvola dla ¶rodowiska GNOME 2.
+
+%package Wasp
+Summary:	Wasp theme for GNOME 2 enviroment
+Summary(pl):	Motyw Wasp dla ¶rodowiska GNOME 2
+Group:		Themes
+Requires:	%{name} = %{version}
+
+%description Wasp
+Wasp theme for GNOME 2 enviroment.
+
+%description Wasp -l pl
+Motyw Wasp dla ¶rodowiska GNOME 2.
+
 %prep
 %setup -q
-%patch1 -p1
 
 %build
 cp -f /usr/share/automake/config.sub .
@@ -55,5 +112,28 @@ rm -rf $RPM_BUILD_ROOT
 %files -f gnome-themes-extra.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/gtk-2.0/2.*/engines/lib*.so
-%{_datadir}/icons/*
-%{_datadir}/themes/*
+
+%files Amaranth
+%defattr(644,root,root,755)
+%{_datadir}/icons/Amaranth
+%{_datadir}/themes/Amaranth
+
+%files Gorilla
+%defattr(644,root,root,755)
+%{_datadir}/icons/Gorilla
+%{_datadir}/themes/Gorilla
+
+%files Lush
+%defattr(644,root,root,755)
+%{_datadir}/icons/Lush
+%{_datadir}/themes/Lush
+
+%files Nuvola
+%defattr(644,root,root,755)
+%{_datadir}/icons/Nuvola
+%{_datadir}/themes/Nuvola*
+
+%files Wasp
+%defattr(644,root,root,755)
+%{_datadir}/icons/Wasp
+%{_datadir}/themes/Wasp
