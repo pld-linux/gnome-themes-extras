@@ -12,7 +12,7 @@ Patch1:		%{name}-nuvola.patch
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel >= 2.2.0
+BuildRequires:	gtk+2-devel >= 2:2.2.0
 BuildRequires:	intltool >= 0.25
 BuildRequires:	libtool
 Requires:	gnome-icon-theme
