@@ -2,7 +2,7 @@ Summary:	Extra themes for GNOME 2 enviroment
 Summary(pl):	Dodatkowe motywy dla ¶rodowiska GNOME 2
 Name:		gnome-themes-extras
 Version:	0.8.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		Themes
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.8/%{name}-%{version}.tar.bz2
@@ -31,7 +31,7 @@ Summary:	Amaranth theme for GNOME 2 enviroment
 Summary(pl):	Motyw Amaranth dla ¶rodowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtk2-theme-engine-Smooth
+Requires:	gtk2-engines >= 2.6.0
 
 %description Amaranth
 Amaranth theme for GNOME 2 enviroment.
@@ -44,7 +44,7 @@ Summary:	Gorilla theme for GNOME 2 enviroment
 Summary(pl):	Motyw Gorilla dla ¶rodowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtk2-theme-engine-Industrial
+Requires:	gtk2-engines >= 2.6.0
 
 %description Gorilla
 Gorilla theme for GNOME 2 enviroment.
@@ -57,7 +57,7 @@ Summary:	Lush theme for GNOME 2 enviroment
 Summary(pl):	Motyw Lush dla ¶rodowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtk2-theme-engine-Smooth
+Requires:	gtk2-engines >= 2.6.0
 
 %description Lush
 Lush theme for GNOME 2 enviroment.
@@ -70,7 +70,7 @@ Summary:	Nuvola theme for GNOME 2 enviroment
 Summary(pl):	Motyw Nuvola dla ¶rodowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtk2-theme-engine-Smooth
+Requires:	gtk2-engines >= 2.6.0
 
 %description Nuvola
 Nuvola theme for GNOME 2 enviroment.
@@ -83,7 +83,7 @@ Summary:	Wasp theme for GNOME 2 enviroment
 Summary(pl):	Motyw Wasp dla ¶rodowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtk2-theme-engine-Smooth
+Requires:	gtk2-engines >= 2.6.0
 
 %description Wasp
 Wasp theme for GNOME 2 enviroment.
@@ -119,12 +119,12 @@ rm -rf $RPM_BUILD_ROOT
 # no *.la for gtk engine modules
 rm -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/2.*/engines/lib*.la
 
-# Industrial are in gtk2-theme-engine-Industrial
+# Industrial are in gtk2-engines >= 2.6.0
 # but gorilla depends on libindustrial.so
 rm -rf $RPM_BUILD_ROOT%{_datadir}/themes/Industrial
 rm  -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/2.*/engines/libindustrial.so
 
-# Smooth engine is in gtk2-theme-engine-Smooth
+# Smooth engine is in gtk2-engines >= 2.6.0
 rm -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/2.*/engines/libsmooth.so
 
 %clean
