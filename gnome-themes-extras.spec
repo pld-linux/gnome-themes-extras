@@ -2,7 +2,7 @@ Summary:	Extra themes for GNOME 2 enviroment
 Summary(pl):	Dodatkowe motywy dla ¶rodowiska GNOME 2
 Name:		gnome-themes-extras
 Version:	0.8.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Themes
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.8/%{name}-%{version}.tar.bz2
@@ -27,6 +27,7 @@ Summary:	Amaranth theme for GNOME 2 enviroment
 Summary(pl):	Motyw Amaranth dla ¶rodowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
+Requires:	gtk2-theme-engine-Smooth
 
 %description Amaranth
 Amaranth theme for GNOME 2 enviroment.
@@ -52,6 +53,7 @@ Summary:	Lush theme for GNOME 2 enviroment
 Summary(pl):	Motyw Lush dla ¶rodowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
+Requires:	gtk2-theme-engine-Smooth
 
 %description Lush
 Lush theme for GNOME 2 enviroment.
@@ -64,6 +66,7 @@ Summary:	Nuvola theme for GNOME 2 enviroment
 Summary(pl):	Motyw Nuvola dla ¶rodowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
+Requires:	gtk2-theme-engine-Smooth
 
 %description Nuvola
 Nuvola theme for GNOME 2 enviroment.
@@ -76,6 +79,7 @@ Summary:	Wasp theme for GNOME 2 enviroment
 Summary(pl):	Motyw Wasp dla ¶rodowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
+Requires:	gtk2-theme-engine-Smooth
 
 %description Wasp
 Wasp theme for GNOME 2 enviroment.
@@ -91,7 +95,6 @@ Motyw Wasp dla ¶rodowiska GNOME 2.
 mv -f po/{no,nb}.po
 
 %build
-cp -f /usr/share/automake/config.sub .
 %{__aclocal} -I m4
 %{__libtoolize}
 %{__autoconf}
@@ -117,12 +120,14 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/2.*/engines/lib*.la
 rm -rf $RPM_BUILD_ROOT%{_datadir}/themes/Industrial
 rm  -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/2.*/engines/libindustrial.so
 
+# Smooth engine is in gtk2-theme-engine-Smooth
+rm -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/2.*/engines/libsmooth.so
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/gtk-2.0/2.*/engines/lib*.so
 
 %files Amaranth
 %defattr(644,root,root,755)
