@@ -2,11 +2,12 @@ Summary:	Extra themes for GNOME 2 enviroment
 Summary(pl):	Dodatkowe motywy dla ¶rodowiska GNOME 2
 Name:		gnome-themes-extras
 Version:	0.7
-Release:	2
+Release:	3
 License:	GPL
 Group:		Themes
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.7/%{name}-%{version}.tar.bz2
 # Source0-md5:	5069fedb0d8404c89d98fe8de6825bca
+Patch0:		%{name}-locale_names.patch
 URL:		http://www.gnome.org/
 BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 2.2.0
@@ -82,6 +83,9 @@ Motyw Wasp dla ¶rodowiska GNOME 2.
 
 %prep
 %setup -q
+%patch -p1
+
+mv -f po/{no,nb}.po
 
 %build
 cp -f /usr/share/automake/config.sub .
