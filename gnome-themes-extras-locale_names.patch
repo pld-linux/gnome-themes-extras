@@ -4,8 +4,8 @@
  AC_FUNC_ALLOCA
  AC_CHECK_FUNCS(setenv putenv)
  
--ALL_LINGUAS="az ca cs da de el en_CA en_GB es fr hr he it ja ko lt nl no pa pl pt pt_BR sk sq sr sr@Latn sv tr zh_CN zh_TW"
-+ALL_LINGUAS="az ca cs da de el en_CA en_GB es fr hr he it ja ko lt nb nl pa pl pt pt_BR sk sq sr sr@Latn sv tr zh_CN zh_TW"
+-ALL_LINGUAS="az ca cs da de el en_CA en_GB es fr hr he it ja ko lt nl no pa pl pt pt_BR ru sk sq sr sr@Latn sv tr zh_CN zh_TW"
++ALL_LINGUAS="az ca cs da de el en_CA en_GB es fr hr he it ja ko lt nb nl pa pl pt pt_BR ru sk sq sr sr@Latn sv tr zh_CN zh_TW"
  AM_GLIB_GNU_GETTEXT
  
  AC_OUTPUT([
