@@ -1,0 +1,21 @@
+diff -urN aa/gnome-themes-extras-0.8.0/Nuvola/gtk-1.0/Makefile.am gnome-themes-extras-0.8.0/Nuvola/gtk-1.0/Makefile.am
+--- aa/gnome-themes-extras-0.8.0/Nuvola/gtk-1.0/Makefile.am	2003-08-05 00:33:11.000000000 +0200
++++ gnome-themes-extras-0.8.0/Nuvola/gtk-1.0/Makefile.am	2004-09-01 14:21:49.962073280 +0200
+@@ -1,4 +1,4 @@
+-themedir = $(datadir)/themes/Nuvola/gtk-1.0
++themedir = $(datadir)/themes/Nuvola/gtk
+ theme_DATA = gtkrc
+ 
+ EXTRA_DIST = $(theme_DATA)
+diff -urN aa/gnome-themes-extras-0.8.0/Nuvola/gtk-2.0/gtkrc gnome-themes-extras-0.8.0/Nuvola/gtk-2.0/gtkrc
+--- aa/gnome-themes-extras-0.8.0/Nuvola/gtk-2.0/gtkrc	2003-08-22 23:37:05.000000000 +0200
++++ gnome-themes-extras-0.8.0/Nuvola/gtk-2.0/gtkrc	2004-09-01 14:22:58.153706576 +0200
+@@ -7,7 +7,7 @@
+ # to match the Nuvola icon set
+ 
+ include "iconrc"
+-gtk-icon-sizes = "panel-menu=32,32"
++gtk-icon-sizes = "panel-menu=24,24"
+ 
+ style "default" {
+ 	######  GTK Style Flags  ###### 
