@@ -4,13 +4,14 @@ Summary:	Extra themes for GNOME 2 enviroment
 Summary(pl):	Dodatkowe motywy dla ¶rodowiska GNOME 2
 Name:		gnome-themes-extras
 Version:	0.5
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Themes
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.5/%{name}-%{version}.tar.bz2
 # Source0-md5:	8b4d38fad00689131cc1fd2b50612cc8
 Patch1:		%{name}-Gorilla.patch
 URL:		http://www.gnome.org/
+BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 2.0.0
 BuildRequires:	intltool >= 0.25
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -26,6 +27,7 @@ Pakiet zawiera zestaw dodatkowych motywów dla ¶rodowiska GNOME 2.
 %patch1 -p1
 
 %build
+cp -f /usr/share/automake/config.sub .
 %configure \
 	--disable-static
 
