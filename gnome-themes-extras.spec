@@ -10,7 +10,7 @@ Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.2/%{name}-%{version}.t
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.gnome.org/
 BuildRequires:	gtk+2-devel >= 2.0.0
-BuildRequires:  intltool >= 0.25
+BuildRequires:	intltool >= 0.25
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
