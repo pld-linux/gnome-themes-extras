@@ -2,7 +2,7 @@ Summary:	Extra themes for GNOME 2 enviroment
 Summary(pl):	Dodatkowe motywy dla ¶rodowiska GNOME 2
 Name:		gnome-themes-extras
 Version:	0.3
-Release:	2
+Release:	3
 License:	GPL
 Group:		Themes
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.3/%{name}-%{version}.tar.bz2
