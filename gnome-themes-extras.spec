@@ -1,13 +1,12 @@
 Summary:	Extra themes for GNOME 2 enviroment
 Summary(pl):	Dodatkowe motywy dla ¶rodowiska GNOME 2
 Name:		gnome-themes-extras
-Version:	0.6
-Release:	2
+Version:	0.7
+Release:	1
 License:	GPL
 Group:		Themes
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.6/%{name}-%{version}.tar.bz2
-# Source0-md5:	3f52f75d013bab11c5c17bc1d3465037
-Patch0:		%{name}-smooth_engine_update.patch
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.7/%{name}-%{version}.tar.bz2
+# Source0-md5:	5069fedb0d8404c89d98fe8de6825bca
 URL:		http://www.gnome.org/
 BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 2.2.0
@@ -83,7 +82,6 @@ Motyw Wasp dla ¶rodowiska GNOME 2.
 
 %prep
 %setup -q
-%patch0 -p0
 
 %build
 cp -f /usr/share/automake/config.sub .
@@ -98,7 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%find_lang gnome-themes-extra
+%find_lang gnome-themes-extras
 
 # no *.la for gtk engine modules
 rm -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/2.*/engines/lib*.la
@@ -111,7 +109,7 @@ rm  -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/2.*/engines/libindustrial.so
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f gnome-themes-extra.lang
+%files -f gnome-themes-extras.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/gtk-2.0/2.*/engines/lib*.so
 
