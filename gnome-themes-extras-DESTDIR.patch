@@ -1,0 +1,14 @@
+diff -urN gnome-themes-extras-0.1.orig/Gorilla/icons/scalable/mimetypes/Makefile.in gnome-themes-extras-0.1/Gorilla/icons/scalable/mimetypes/Makefile.in
+--- gnome-themes-extras-0.1.orig/Gorilla/icons/scalable/mimetypes/Makefile.in	Thu Jun 12 07:06:34 2003
++++ gnome-themes-extras-0.1/Gorilla/icons/scalable/mimetypes/Makefile.in	Thu Jun 12 07:25:04 2003
+@@ -323,8 +323,8 @@
+ 
+ 
+ install-data-local:
+-	mkdir -p $(icondir)
+-	cd $(icondir) && \
++	mkdir -p $(DESTDIR)$(icondir)
++	cd $(DESTDIR)$(icondir) && \
+ 	ln -sf gnome-compressed.svg gnome-mime-application-x-stuffit.svg && \
+ 	ln -sf gnome-mime-application-x-font.svg gnome-mime-application-x-font-ttf.svg && \
+ 	ln -sf gnome-mime-application-x-font.svg gnome-mime-application-x-font-pcf.svg && \
