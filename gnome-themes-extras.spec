@@ -8,11 +8,12 @@ Group:		Themes
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.8/%{name}-%{version}.tar.bz2
 # Source0-md5:	a2c3eead4dd29bad88b57570d67afd33
 Patch0:		%{name}-locale_names.patch
-#Patch1:		%{name}-nuvola.patch
+Patch1:		%{name}-nuvola.patch
 URL:		http://www.gnome.org/
 BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 2.2.0
 BuildRequires:	intltool >= 0.25
+Requires:	gnome-icon-theme
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -85,7 +86,7 @@ Motyw Wasp dla ¶rodowiska GNOME 2.
 %prep
 %setup -q
 %patch0 -p1
-#%patch1 -p1
+%patch1 -p1
 
 mv -f po/{no,nb}.po
 
