@@ -7,6 +7,6 @@ diff -urN gnome-themes-extras-0.3.orig/Amaranth/icons/scalable/mimetypes/Makefil
  	mkdir -p $(DESTDIR)$(icondir)
 -	cd $(icondir) && \
 +	cd $(DESTDIR)$(icondir) && \
- 	ln -sf gnome-mime-audio.svg gnome-mime-application-x-ogg.svg
- 
- uninstall-local:
+ 	ln -sf gnome-mime-audio.svg gnome-mime-application-x-ogg.svg && \
+ 	ln -sf gnome-compressed.svg gnome-mime-application-x-stuffit.svg && \
+ 	ln -sf gnome-compressed.svg gnome-mime-application-x-tgz.svg
