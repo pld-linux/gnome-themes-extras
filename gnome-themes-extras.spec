@@ -2,7 +2,7 @@ Summary:	Extra themes for GNOME 2 enviroment
 Summary(pl):	Dodatkowe motywy dla ¶rodowiska GNOME 2
 Name:		gnome-themes-extras
 Version:	0.7
-Release:	1
+Release:	2
 License:	GPL
 Group:		Themes
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.7/%{name}-%{version}.tar.bz2
@@ -23,7 +23,7 @@ Pakiet zawiera zestaw dodatkowych motywów dla ¶rodowiska GNOME 2.
 Summary:	Amaranth theme for GNOME 2 enviroment
 Summary(pl):	Motyw Amaranth dla ¶rodowiska GNOME 2
 Group:		Themes
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description Amaranth
 Amaranth theme for GNOME 2 enviroment.
@@ -35,8 +35,8 @@ Motyw Amaranth dla ¶rodowiska GNOME 2.
 Summary:	Gorilla theme for GNOME 2 enviroment
 Summary(pl):	Motyw Gorilla dla ¶rodowiska GNOME 2
 Group:		Themes
-Requires:	%{name} = %{version}
-Requires:	ximian-artwork
+Requires:	%{name} = %{version}-%{release}
+Requires:	gtk2-theme-engine-Industrial
 
 %description Gorilla
 Gorilla theme for GNOME 2 enviroment.
@@ -48,7 +48,7 @@ Motyw Gorilla dla ¶rodowiska GNOME 2.
 Summary:	Lush theme for GNOME 2 enviroment
 Summary(pl):	Motyw Lush dla ¶rodowiska GNOME 2
 Group:		Themes
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description Lush
 Lush theme for GNOME 2 enviroment.
@@ -60,7 +60,7 @@ Motyw Lush dla ¶rodowiska GNOME 2.
 Summary:	Nuvola theme for GNOME 2 enviroment
 Summary(pl):	Motyw Nuvola dla ¶rodowiska GNOME 2
 Group:		Themes
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description Nuvola
 Nuvola theme for GNOME 2 enviroment.
@@ -72,7 +72,7 @@ Motyw Nuvola dla ¶rodowiska GNOME 2.
 Summary:	Wasp theme for GNOME 2 enviroment
 Summary(pl):	Motyw Wasp dla ¶rodowiska GNOME 2
 Group:		Themes
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description Wasp
 Wasp theme for GNOME 2 enviroment.
@@ -96,12 +96,12 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%find_lang gnome-themes-extras
+%find_lang %{name}
 
 # no *.la for gtk engine modules
 rm -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/2.*/engines/lib*.la
 
-# Industrial are in ximian-artwork
+# Industrial are in gtk2-theme-engine-Industrial
 # but gorilla depends on libindustrial.so
 rm -rf $RPM_BUILD_ROOT%{_datadir}/themes/Industrial
 rm  -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/2.*/engines/libindustrial.so
@@ -109,7 +109,7 @@ rm  -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/2.*/engines/libindustrial.so
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f gnome-themes-extras.lang
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/gtk-2.0/2.*/engines/lib*.so
 
