@@ -1,98 +1,12 @@
-diff -urN gnome-themes-extras-0.2.orig/Gorilla/icons/scalable/mimetypes/Makefile.in gnome-themes-extras-0.2/Gorilla/icons/scalable/mimetypes/Makefile.in
---- gnome-themes-extras-0.2.orig/Gorilla/icons/scalable/mimetypes/Makefile.in	Sun Jul 13 21:53:57 2003
-+++ gnome-themes-extras-0.2/Gorilla/icons/scalable/mimetypes/Makefile.in	Sun Jul 13 21:54:13 2003
-@@ -323,8 +323,8 @@
- 
- 
- install-data-local:
--	mkdir -p $(icondir)
--	cd $(icondir) && \
-+	mkdir -p $(DESTDIR)$(icondir)
-+	cd $(DESTDIR)$(icondir) && \
- 	ln -sf gnome-compressed.svg gnome-mime-application-x-stuffit.svg && \
- 	ln -sf gnome-mime-application-x-font.svg gnome-mime-application-x-font-ttf.svg && \
- 	ln -sf gnome-mime-application-x-font.svg gnome-mime-application-x-font-pcf.svg && \
-diff -urN gnome-themes-extras-0.2.orig/Lush/icons/scalable/apps/Makefile.in gnome-themes-extras-0.2/Lush/icons/scalable/apps/Makefile.in
---- gnome-themes-extras-0.2.orig/Lush/icons/scalable/apps/Makefile.in	Sun Jul 13 21:53:57 2003
-+++ gnome-themes-extras-0.2/Lush/icons/scalable/apps/Makefile.in	Sun Jul 13 22:03:02 2003
-@@ -281,8 +281,8 @@
- 
+diff -urN gnome-themes-extras-0.3.orig/Amaranth/icons/scalable/mimetypes/Makefile.in gnome-themes-extras-0.3/Amaranth/icons/scalable/mimetypes/Makefile.in
+--- gnome-themes-extras-0.3.orig/Amaranth/icons/scalable/mimetypes/Makefile.in	Fri Aug 15 13:43:15 2003
++++ gnome-themes-extras-0.3/Amaranth/icons/scalable/mimetypes/Makefile.in	Fri Aug 15 13:45:08 2003
+@@ -302,7 +302,7 @@
  
  install-data-local:
--	mkdir -p $(icondir)
+ 	mkdir -p $(DESTDIR)$(icondir)
 -	cd $(icondir) && \
-+	mkdir -p $(DESTDIR)$(icondir)
 +	cd $(DESTDIR)$(icondir) && \
- 	ln -sf gnome-gimp.svg gnome-palette.svg && \
- 	ln -sf mozilla-star.png redhat-web-browser.svg
+ 	ln -sf gnome-mime-audio.svg gnome-mime-application-x-ogg.svg
  
-diff -urN gnome-themes-extras-0.2.orig/Lush/icons/scalable/mimetypes/Makefile.in gnome-themes-extras-0.2/Lush/icons/scalable/mimetypes/Makefile.in
---- gnome-themes-extras-0.2.orig/Lush/icons/scalable/mimetypes/Makefile.in	Sun Jul 13 21:53:57 2003
-+++ gnome-themes-extras-0.2/Lush/icons/scalable/mimetypes/Makefile.in	Sun Jul 13 22:01:14 2003
-@@ -322,8 +322,8 @@
- 
- 
- install-data-local:
--	mkdir -p $(icondir)
--	cd $(icondir) && \
-+	mkdir -p $(DESTDIR)$(icondir)
-+	cd $(DESTDIR)$(icondir) && \
- 	ln -sf gnome-compressed.svg gnome-mime-application-x-stuffit.svg && \
- 	ln -sf gnome-mime-application-x-font.svg gnome-mime-application-x-font-pcf.svg && \
- 	ln -sf gnome-mime-application-x-font.svg gnome-mime-application-x-font-type1.svg && \
-diff -urN gnome-themes-extras-0.2.orig/Nuvola/icons/scalable/apps/Makefile.in gnome-themes-extras-0.2/Nuvola/icons/scalable/apps/Makefile.in
---- gnome-themes-extras-0.2.orig/Nuvola/icons/scalable/apps/Makefile.in	Sun Jul 13 21:53:57 2003
-+++ gnome-themes-extras-0.2/Nuvola/icons/scalable/apps/Makefile.in	Sun Jul 13 21:56:35 2003
-@@ -296,8 +296,8 @@
- 
- 
- install-data-local:
--	mkdir -p $(icondir)
--	cd $(icondir) && \
-+	mkdir -p $(DESTDIR)$(icondir)
-+	cd $(DESTDIR)$(icondir) && \
- 	ln -sf evolution-1.4.svg redhat-email.svg && \
- 	ln -sf gnome-gimp.svg gnome-palette.svg && \
- 	ln -sf mozilla-star.svg web-browser.svg && \
-diff -urN gnome-themes-extras-0.2.orig/Nuvola/icons/scalable/mimetypes/Makefile.in gnome-themes-extras-0.2/Nuvola/icons/scalable/mimetypes/Makefile.in
---- gnome-themes-extras-0.2.orig/Nuvola/icons/scalable/mimetypes/Makefile.in	Sun Jul 13 21:53:57 2003
-+++ gnome-themes-extras-0.2/Nuvola/icons/scalable/mimetypes/Makefile.in	Sun Jul 13 21:58:53 2003
-@@ -305,8 +305,8 @@
- 
- 
- install-data-local:
--	mkdir -p $(icondir)
--	cd $(icondir) && \
-+	mkdir -p $(DESTDIR)$(icondir)
-+	cd $(DESTDIR)$(icondir) && \
- 	ln -sf gnome-compressed.svg gnome-mime-application-x-stuffit.svg && \
- 	ln -sf gnome-mime-application-x-font.svg gnome-mime-application-x-font-ttf.svg && \
- 	ln -sf gnome-mime-application-x-font.svg gnome-mime-application-x-font-pcf.svg && \
-diff -urN gnome-themes-extras-0.2.orig/Wasp/icons/scalable/apps/Makefile.in gnome-themes-extras-0.2/Wasp/icons/scalable/apps/Makefile.in
---- gnome-themes-extras-0.2.orig/Wasp/icons/scalable/apps/Makefile.in	Sun Jul 13 21:53:57 2003
-+++ gnome-themes-extras-0.2/Wasp/icons/scalable/apps/Makefile.in	Sun Jul 13 22:04:33 2003
-@@ -307,8 +307,8 @@
- 
- 
- install-data-local:
--	mkdir -p $(icondir)
--	cd $(icondir) && \
-+	mkdir -p $(DESTDIR)$(icondir)
-+	cd $(DESTDIR)$(icondir) && \
- 	ln -sf gnome-audio2.svg xmms.svg && \
- 	ln -sf gnome-audio2.svg gnome-media-player.svg && \
- 	ln -sf gnome-gimp.svg gnome-palette.svg && \
-diff -urN gnome-themes-extras-0.2.orig/Wasp/icons/scalable/mimetypes/Makefile.in gnome-themes-extras-0.2/Wasp/icons/scalable/mimetypes/Makefile.in
---- gnome-themes-extras-0.2.orig/Wasp/icons/scalable/mimetypes/Makefile.in	Sun Jul 13 21:53:58 2003
-+++ gnome-themes-extras-0.2/Wasp/icons/scalable/mimetypes/Makefile.in	Sun Jul 13 22:04:57 2003
-@@ -301,8 +301,8 @@
- 
- 
- install-data-local:
--	mkdir -p $(icondir)
--	cd $(icondir) && \
-+	mkdir -p $(DESTDIR)$(icondir)
-+	cd $(DESTDIR)$(icondir) && \
- 	ln -sf gnome-mime-package.svg gnome-mime-application-x-stuffit.svg && \
- 	ln -sf gnome-mime-application-x-font.svg gnome-mime-application-x-font-ttf.svg && \
- 	ln -sf gnome-mime-application-x-font.svg gnome-mime-application-x-font-pcf.svg && \
+ uninstall-local:
