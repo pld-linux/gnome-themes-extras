@@ -1,8 +1,10 @@
+# TODO:
+# - separate Gorilla theme and make it R: ximian-artwork (or engine industrial)
 Summary:	Extra themes for GNOME 2 enviroment
 Summary(pl):	Dodatkowe motywy dla ¶rodowiska GNOME 2
 Name:		gnome-themes-extras
 Version:	0.3
-Release:	3
+Release:	3.1
 License:	GPL
 Group:		Themes
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.3/%{name}-%{version}.tar.bz2
@@ -41,6 +43,11 @@ rm -rf $RPM_BUILD_ROOT
 
 # no *.la for gtk engine modules
 rm -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/2.*/engines/lib*.la
+
+# Industrial are in ximian-artwork
+# but gorilla depends on libindustrial.so
+rm -rf $RPM_BUILD_ROOT%{_datadir}/themes/Industrial
+rm  -f $RPM_BUILD_ROOT%{_libdir}gtk-2.0/2.*/engines/libindustrial.so
 
 %clean
 rm -rf $RPM_BUILD_ROOT
