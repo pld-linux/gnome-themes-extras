@@ -3,12 +3,12 @@
 Summary:	Extra themes for GNOME 2 enviroment
 Summary(pl):	Dodatkowe motywy dla ¶rodowiska GNOME 2
 Name:		gnome-themes-extras
-Version:	0.3
-Release:	3.1
+Version:	0.4
+Release:	0.1
 License:	GPL
 Group:		Themes
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.3/%{name}-%{version}.tar.bz2
-# Source0-md5:	2e0dc1ef5b506e393536f5ef57e95b6d
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.4/%{name}-%{version}.tar.bz2
+# Source0-md5:	4f78d8358aba27b22681beed969e8e7c
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-Gorilla.patch
 URL:		http://www.gnome.org/
@@ -47,7 +47,7 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/2.*/engines/lib*.la
 # Industrial are in ximian-artwork
 # but gorilla depends on libindustrial.so
 rm -rf $RPM_BUILD_ROOT%{_datadir}/themes/Industrial
-rm  -f $RPM_BUILD_ROOT%{_libdir}gtk-2.0/2.*/engines/libindustrial.so
+rm  -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/2.*/engines/libindustrial.so
 
 %clean
 rm -rf $RPM_BUILD_ROOT
