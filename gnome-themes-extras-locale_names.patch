@@ -1,0 +1,22 @@
+--- gnome-themes-extras-0.7/configure.in~	Tue Jul 27 21:16:55 2004
++++ gnome-themes-extras-0.7/configure.in	Tue Jul 27 21:16:55 2004
+@@ -54,7 +54,7 @@
+ AC_FUNC_ALLOCA
+ AC_CHECK_FUNCS(setenv putenv)
+ 
+-ALL_LINGUAS="az ca cs da de el en_GB es fr hr he it ja ko lt nl no pa pl pt sk sq sr sr@Latn sv tr zh_CN zh_TW"
++ALL_LINGUAS="az ca cs da de el en_GB es fr hr he it ja ko lt nb nl pa pl pt sk sq sr sr@Latn sv tr zh_CN zh_TW"
+ AM_GLIB_GNU_GETTEXT
+ 
+ AC_OUTPUT([
+--- gnome-themes-extras-0.7/configure~	Tue Jul 27 21:16:47 2004
++++ gnome-themes-extras-0.7/configure	Tue Jul 27 21:16:47 2004
+@@ -20113,7 +20113,7 @@
+ done
+ 
+ 
+-ALL_LINGUAS="az ca cs da de el en_GB es fr hr he it ja ko lt nl no pa pl pt sk sq sr sr@Latn sv tr zh_CN zh_TW"
++ALL_LINGUAS="az ca cs da de el en_GB es fr hr he it ja ko lt mb nl pa pl pt sk sq sr sr@Latn sv tr zh_CN zh_TW"
+ 
+ 
+ for ac_header in locale.h
