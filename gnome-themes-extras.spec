@@ -1,12 +1,12 @@
 Summary:	Extra themes for GNOME 2 enviroment
 Summary(pl):	Dodatkowe motywy dla ¶rodowiska GNOME 2
 Name:		gnome-themes-extras
-Version:	0.8.0
-Release:	3
+Version:	0.8.1
+Release:	1
 License:	GPL
 Group:		Themes
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.8/%{name}-%{version}.tar.bz2
-# Source0-md5:	a2c3eead4dd29bad88b57570d67afd33
+# Source0-md5:	0dce0d3411460d39cd57cb06d0f3012f
 Patch0:		%{name}-locale_names.patch
 Patch1:		%{name}-nuvola.patch
 URL:		http://www.gnome.org/
@@ -31,7 +31,7 @@ Summary:	Amaranth theme for GNOME 2 enviroment
 Summary(pl):	Motyw Amaranth dla ¶rodowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtk2-engines >= 2.6.0
+Requires:	gtk2-engines >= 2.6.1
 
 %description Amaranth
 Amaranth theme for GNOME 2 enviroment.
@@ -44,7 +44,7 @@ Summary:	Gorilla theme for GNOME 2 enviroment
 Summary(pl):	Motyw Gorilla dla ¶rodowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtk2-engines >= 2.6.0
+Requires:	gtk2-engines >= 2.6.1
 
 %description Gorilla
 Gorilla theme for GNOME 2 enviroment.
@@ -57,7 +57,7 @@ Summary:	Lush theme for GNOME 2 enviroment
 Summary(pl):	Motyw Lush dla ¶rodowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtk2-engines >= 2.6.0
+Requires:	gtk2-engines >= 2.6.1
 
 %description Lush
 Lush theme for GNOME 2 enviroment.
@@ -70,7 +70,7 @@ Summary:	Nuvola theme for GNOME 2 enviroment
 Summary(pl):	Motyw Nuvola dla ¶rodowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtk2-engines >= 2.6.0
+Requires:	gtk2-engines >= 2.6.1
 
 %description Nuvola
 Nuvola theme for GNOME 2 enviroment.
@@ -83,7 +83,7 @@ Summary:	Wasp theme for GNOME 2 enviroment
 Summary(pl):	Motyw Wasp dla ¶rodowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtk2-engines >= 2.6.0
+Requires:	gtk2-engines >= 2.6.1
 
 %description Wasp
 Wasp theme for GNOME 2 enviroment.
