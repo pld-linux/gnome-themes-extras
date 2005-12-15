@@ -1,12 +1,12 @@
 Summary:	Extra themes for GNOME 2 enviroment
 Summary(pl):	Dodatkowe motywy dla ¶rodowiska GNOME 2
 Name:		gnome-themes-extras
-Version:	0.8.1
+Version:	0.9.0
 Release:	1
 License:	GPL
 Group:		Themes
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.8/%{name}-%{version}.tar.bz2
-# Source0-md5:	0dce0d3411460d39cd57cb06d0f3012f
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.9/%{name}-%{version}.tar.bz2
+# Source0-md5:	bac18c11fb9de8403e27441be64d9717
 Patch0:		%{name}-locale_names.patch
 Patch1:		%{name}-nuvola.patch
 URL:		http://www.gnome.org/
