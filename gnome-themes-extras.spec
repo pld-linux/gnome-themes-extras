@@ -114,6 +114,11 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+for dir in Amaranth  Gorilla  Lush  Nuvola  Wasp
+do
+    gtk-update-icon-cache -ft $RPM_BUILD_ROOT%{_iconsdir}/$dir
+done
+
 %find_lang %{name}
 
 # no *.la for gtk engine modules
