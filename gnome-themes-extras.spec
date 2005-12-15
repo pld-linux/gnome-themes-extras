@@ -114,7 +114,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-for dir in Amaranth  Gorilla  Lush  Nuvola  Wasp
+for dir in Amaranth Gorilla Lush Nuvola Wasp
 do
     gtk-update-icon-cache -ft $RPM_BUILD_ROOT%{_iconsdir}/$dir
 done
@@ -123,14 +123,6 @@ done
 
 # no *.la for gtk engine modules
 rm -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/2.*/engines/lib*.la
-
-# Industrial are in gtk2-engines >= 2.6.0
-# but gorilla depends on libindustrial.so
-rm -rf $RPM_BUILD_ROOT%{_datadir}/themes/Industrial
-rm  -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/2.*/engines/libindustrial.so
-
-# Smooth engine is in gtk2-engines >= 2.6.0
-rm -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/2.*/engines/libsmooth.so
 
 %clean
 rm -rf $RPM_BUILD_ROOT
