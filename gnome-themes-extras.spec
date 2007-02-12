@@ -1,5 +1,5 @@
 Summary:	Extra themes for GNOME 2 enviroment
-Summary(pl):	Dodatkowe motywy dla ¶rodowiska GNOME 2
+Summary(pl.UTF-8):   Dodatkowe motywy dla Å›rodowiska GNOME 2
 Name:		gnome-themes-extras
 Version:	0.9.0
 Release:	1
@@ -23,12 +23,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This package contains a set of extra themes for the GNOME 2 desktop.
 
-%description -l pl
-Pakiet zawiera zestaw dodatkowych motywów dla ¶rodowiska GNOME 2.
+%description -l pl.UTF-8
+Pakiet zawiera zestaw dodatkowych motywÃ³w dla Å›rodowiska GNOME 2.
 
 %package Amaranth
 Summary:	Amaranth theme for GNOME 2 enviroment
-Summary(pl):	Motyw Amaranth dla ¶rodowiska GNOME 2
+Summary(pl.UTF-8):   Motyw Amaranth dla Å›rodowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk2-engines >= 2.6.1
@@ -36,12 +36,12 @@ Requires:	gtk2-engines >= 2.6.1
 %description Amaranth
 Amaranth theme for GNOME 2 enviroment.
 
-%description Amaranth -l pl
-Motyw Amaranth dla ¶rodowiska GNOME 2.
+%description Amaranth -l pl.UTF-8
+Motyw Amaranth dla Å›rodowiska GNOME 2.
 
 %package Gorilla
 Summary:	Gorilla theme for GNOME 2 enviroment
-Summary(pl):	Motyw Gorilla dla ¶rodowiska GNOME 2
+Summary(pl.UTF-8):   Motyw Gorilla dla Å›rodowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk2-engines >= 2.6.1
@@ -49,12 +49,12 @@ Requires:	gtk2-engines >= 2.6.1
 %description Gorilla
 Gorilla theme for GNOME 2 enviroment.
 
-%description Gorilla -l pl
-Motyw Gorilla dla ¶rodowiska GNOME 2.
+%description Gorilla -l pl.UTF-8
+Motyw Gorilla dla Å›rodowiska GNOME 2.
 
 %package Lush
 Summary:	Lush theme for GNOME 2 enviroment
-Summary(pl):	Motyw Lush dla ¶rodowiska GNOME 2
+Summary(pl.UTF-8):   Motyw Lush dla Å›rodowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk2-engines >= 2.6.1
@@ -62,12 +62,12 @@ Requires:	gtk2-engines >= 2.6.1
 %description Lush
 Lush theme for GNOME 2 enviroment.
 
-%description Lush -l pl
-Motyw Lush dla ¶rodowiska GNOME 2.
+%description Lush -l pl.UTF-8
+Motyw Lush dla Å›rodowiska GNOME 2.
 
 %package Nuvola
 Summary:	Nuvola theme for GNOME 2 enviroment
-Summary(pl):	Motyw Nuvola dla ¶rodowiska GNOME 2
+Summary(pl.UTF-8):   Motyw Nuvola dla Å›rodowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk2-engines >= 2.6.1
@@ -75,12 +75,12 @@ Requires:	gtk2-engines >= 2.6.1
 %description Nuvola
 Nuvola theme for GNOME 2 enviroment.
 
-%description Nuvola -l pl
-Motyw Nuvola dla ¶rodowiska GNOME 2.
+%description Nuvola -l pl.UTF-8
+Motyw Nuvola dla Å›rodowiska GNOME 2.
 
 %package Wasp
 Summary:	Wasp theme for GNOME 2 enviroment
-Summary(pl):	Motyw Wasp dla ¶rodowiska GNOME 2
+Summary(pl.UTF-8):   Motyw Wasp dla Å›rodowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk2-engines >= 2.6.1
@@ -88,8 +88,8 @@ Requires:	gtk2-engines >= 2.6.1
 %description Wasp
 Wasp theme for GNOME 2 enviroment.
 
-%description Wasp -l pl
-Motyw Wasp dla ¶rodowiska GNOME 2.
+%description Wasp -l pl.UTF-8
+Motyw Wasp dla Å›rodowiska GNOME 2.
 
 %prep
 %setup -q
