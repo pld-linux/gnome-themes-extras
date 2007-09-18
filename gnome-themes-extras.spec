@@ -1,23 +1,26 @@
 Summary:	Extra themes for GNOME 2 enviroment
 Summary(pl.UTF-8):	Dodatkowe motywy dla środowiska GNOME 2
 Name:		gnome-themes-extras
-Version:	0.9.0
-Release:	2
+Version:	2.20
+Release:	1
 License:	GPL
 Group:		Themes
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.9/%{name}-%{version}.tar.bz2
-# Source0-md5:	bac18c11fb9de8403e27441be64d9717
-Patch0:		%{name}-locale_names.patch
-Patch1:		%{name}-nuvola.patch
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/2.20/%{name}-%{version}.tar.bz2
+# Source0-md5:	830b27cb368e40c70b15288d2db12937
 URL:		http://www.gnome.org/
-BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	autoconf >= 2.53
+BuildRequires:	automake >= 1:1.9
 BuildRequires:	gettext-devel
-BuildRequires:	gtk+2-devel >= 2:2.2.0
-BuildRequires:	intltool >= 0.25
+BuildRequires:	gtk2-engines >= 2.12.0
+BuildRequires:	gtk+2-devel >= 2:2.12.0
+BuildRequires:	intltool >= 0.36.2
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-Requires:	gnome-icon-theme
+Obsoletes:	gnome-themes-extras-Amaranth
+Obsoletes:	gnome-themes-extras-Gorilla
+Obsoletes:	gnome-themes-extras-Lush
+Obsoletes:	gnome-themes-extras-Nuvola
+Obsoletes:	gnome-themes-extras-Wasp
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -26,81 +29,61 @@ This package contains a set of extra themes for the GNOME 2 desktop.
 %description -l pl.UTF-8
 Pakiet zawiera zestaw dodatkowych motywów dla środowiska GNOME 2.
 
-%package Amaranth
-Summary:	Amaranth theme for GNOME 2 enviroment
-Summary(pl.UTF-8):	Motyw Amaranth dla środowiska GNOME 2
+%package Darklooks
+Summary:	Darklooks theme for GNOME 2 enviroment
+Summary(pl.UTF-8):	Motyw Darklooks dla środowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtk2-engines >= 2.6.1
 
-%description Amaranth
-Amaranth theme for GNOME 2 enviroment.
+%description Darklooks
+Darklooks theme for GNOME 2 enviroment.
 
-%description Amaranth -l pl.UTF-8
-Motyw Amaranth dla środowiska GNOME 2.
+%description Darklooks -l pl.UTF-8
+Motyw Darklooks dla środowiska GNOME 2.
 
-%package Gorilla
-Summary:	Gorilla theme for GNOME 2 enviroment
-Summary(pl.UTF-8):	Motyw Gorilla dla środowiska GNOME 2
+%package Foxtrot
+Summary:	Foxtrot theme for GNOME 2 enviroment
+Summary(pl.UTF-8):	Motyw Foxtrot dla środowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtk2-engines >= 2.6.1
 
-%description Gorilla
-Gorilla theme for GNOME 2 enviroment.
+%description Foxtrot
+Foxtrot theme for GNOME 2 enviroment.
 
-%description Gorilla -l pl.UTF-8
-Motyw Gorilla dla środowiska GNOME 2.
+%description Foxtrot -l pl.UTF-8
+Motyw Foxtrot dla środowiska GNOME 2.
 
-%package Lush
-Summary:	Lush theme for GNOME 2 enviroment
-Summary(pl.UTF-8):	Motyw Lush dla środowiska GNOME 2
+%package Gion
+Summary:	Gion theme for GNOME 2 enviroment
+Summary(pl.UTF-8):	Motyw Gion dla środowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtk2-engines >= 2.6.1
 
-%description Lush
-Lush theme for GNOME 2 enviroment.
+%description Gion
+Gion theme for GNOME 2 enviroment.
 
-%description Lush -l pl.UTF-8
-Motyw Lush dla środowiska GNOME 2.
+%description Gion -l pl.UTF-8
+Motyw Gion dla środowiska GNOME 2.
 
-%package Nuvola
-Summary:	Nuvola theme for GNOME 2 enviroment
-Summary(pl.UTF-8):	Motyw Nuvola dla środowiska GNOME 2
+%package Neu
+Summary:	Neu theme for GNOME 2 enviroment
+Summary(pl.UTF-8):	Motyw Neu dla środowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtk2-engines >= 2.6.1
 
-%description Nuvola
-Nuvola theme for GNOME 2 enviroment.
+%description Neu
+Neu theme for GNOME 2 enviroment.
 
-%description Nuvola -l pl.UTF-8
-Motyw Nuvola dla środowiska GNOME 2.
-
-%package Wasp
-Summary:	Wasp theme for GNOME 2 enviroment
-Summary(pl.UTF-8):	Motyw Wasp dla środowiska GNOME 2
-Group:		Themes
-Requires:	%{name} = %{version}-%{release}
-Requires:	gtk2-engines >= 2.6.1
-
-%description Wasp
-Wasp theme for GNOME 2 enviroment.
-
-%description Wasp -l pl.UTF-8
-Motyw Wasp dla środowiska GNOME 2.
+%description Neu -l pl.UTF-8
+Motyw Neu dla środowiska GNOME 2.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
-
-mv -f po/{no,nb}.po
 
 %build
-%{__aclocal} -I m4
+%{__intltoolize}
 %{__libtoolize}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__automake}
 %configure \
@@ -114,43 +97,29 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-for dir in Amaranth Gorilla Lush Nuvola Wasp
+for dir in Foxtrot Gion Neu
 do
     gtk-update-icon-cache -ft $RPM_BUILD_ROOT%{_iconsdir}/$dir
 done
 
-%find_lang %{name}
-
-# no *.la for gtk engine modules
-rm -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/2.*/engines/lib*.la
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{name}.lang
+%files
 %defattr(644,root,root,755)
 
-%files Amaranth
+%files Darklooks
 %defattr(644,root,root,755)
-%{_datadir}/icons/Amaranth
-%{_datadir}/themes/Amaranth
+%{_datadir}/themes/Darklooks
 
-%files Gorilla
+%files Foxtrot
 %defattr(644,root,root,755)
-%{_datadir}/icons/Gorilla
-%{_datadir}/themes/Gorilla
+%{_iconsdir}/Foxtrot
 
-%files Lush
+%files Gion
 %defattr(644,root,root,755)
-%{_datadir}/icons/Lush
-%{_datadir}/themes/Lush
+%{_iconsdir}/Gion
 
-%files Nuvola
+%files Neu
 %defattr(644,root,root,755)
-%{_datadir}/icons/Nuvola
-%{_datadir}/themes/Nuvola*
-
-%files Wasp
-%defattr(644,root,root,755)
-%{_datadir}/icons/Wasp
-%{_datadir}/themes/Wasp
+%{_iconsdir}/Neu
