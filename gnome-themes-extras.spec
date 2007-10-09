@@ -1,4 +1,4 @@
-Summary:	Extra themes for GNOME 2 enviroment
+Summary:	Extra themes for GNOME 2 environment
 Summary(pl.UTF-8):	Dodatkowe motywy dla środowiska GNOME 2
 Name:		gnome-themes-extras
 Version:	2.20
@@ -30,49 +30,49 @@ This package contains a set of extra themes for the GNOME 2 desktop.
 Pakiet zawiera zestaw dodatkowych motywów dla środowiska GNOME 2.
 
 %package Darklooks
-Summary:	Darklooks theme for GNOME 2 enviroment
+Summary:	Darklooks theme for GNOME 2 environment
 Summary(pl.UTF-8):	Motyw Darklooks dla środowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
 
 %description Darklooks
-Darklooks theme for GNOME 2 enviroment.
+Darklooks theme for GNOME 2 environment.
 
 %description Darklooks -l pl.UTF-8
 Motyw Darklooks dla środowiska GNOME 2.
 
 %package Foxtrot
-Summary:	Foxtrot theme for GNOME 2 enviroment
+Summary:	Foxtrot theme for GNOME 2 environment
 Summary(pl.UTF-8):	Motyw Foxtrot dla środowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
 
 %description Foxtrot
-Foxtrot theme for GNOME 2 enviroment.
+Foxtrot theme for GNOME 2 environment.
 
 %description Foxtrot -l pl.UTF-8
 Motyw Foxtrot dla środowiska GNOME 2.
 
 %package Gion
-Summary:	Gion theme for GNOME 2 enviroment
+Summary:	Gion theme for GNOME 2 environment
 Summary(pl.UTF-8):	Motyw Gion dla środowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
 
 %description Gion
-Gion theme for GNOME 2 enviroment.
+Gion theme for GNOME 2 environment.
 
 %description Gion -l pl.UTF-8
 Motyw Gion dla środowiska GNOME 2.
 
 %package Neu
-Summary:	Neu theme for GNOME 2 enviroment
+Summary:	Neu theme for GNOME 2 environment
 Summary(pl.UTF-8):	Motyw Neu dla środowiska GNOME 2
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
 
 %description Neu
-Neu theme for GNOME 2 enviroment.
+Neu theme for GNOME 2 environment.
 
 %description Neu -l pl.UTF-8
 Motyw Neu dla środowiska GNOME 2.
