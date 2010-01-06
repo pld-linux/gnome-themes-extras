@@ -5,14 +5,15 @@ Version:	2.22.0
 Release:	1
 License:	GPL
 Group:		Themes
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/2.22/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-themes-extras/2.22/%{name}-%{version}.tar.bz2
 # Source0-md5:	3c24a31bf43d4dbb97bc8712b8cd72b3
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	gettext-devel
-BuildRequires:	gtk2-engines >= 2.12.0
 BuildRequires:	gtk+2-devel >= 2:2.12.0
+BuildRequires:	gtk2-engines >= 2.12.0
+BuildRequires:	icon-naming-utils
 BuildRequires:	intltool >= 0.36.2
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
