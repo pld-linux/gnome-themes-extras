@@ -2,7 +2,7 @@ Summary:	Extra themes for GNOME 2 environment
 Summary(pl.UTF-8):	Dodatkowe motywy dla środowiska GNOME 2
 Name:		gnome-themes-extras
 Version:	2.22.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		Themes
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-themes-extras/2.22/%{name}-%{version}.tar.bz2
@@ -18,6 +18,12 @@ BuildRequires:	icon-naming-utils
 BuildRequires:	intltool >= 0.36.2
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
+Requires:	gnome-themes-extras-Darklooks
+Requires:	gnome-themes-extras-Foxtrot
+Requires:	gnome-themes-extras-Gion
+Requires:	gnome-themes-extras-Neu
+Requires:	gnome-themes-extras-Unity
+Requires:	gnome-themes-extras-gnome-alternative
 Obsoletes:	gnome-themes-extras-Amaranth
 Obsoletes:	gnome-themes-extras-Gorilla
 Obsoletes:	gnome-themes-extras-Lush
@@ -35,7 +41,6 @@ Pakiet zawiera zestaw dodatkowych motywów dla środowiska GNOME 2.
 Summary:	Darklooks theme for GNOME 2 environment
 Summary(pl.UTF-8):	Motyw Darklooks dla środowiska GNOME 2
 Group:		Themes
-Requires:	%{name} = %{version}-%{release}
 
 %description Darklooks
 Darklooks theme for GNOME 2 environment.
@@ -47,7 +52,6 @@ Motyw Darklooks dla środowiska GNOME 2.
 Summary:	Foxtrot theme for GNOME 2 environment
 Summary(pl.UTF-8):	Motyw Foxtrot dla środowiska GNOME 2
 Group:		Themes
-Requires:	%{name} = %{version}-%{release}
 
 %description Foxtrot
 Foxtrot theme for GNOME 2 environment.
@@ -59,7 +63,6 @@ Motyw Foxtrot dla środowiska GNOME 2.
 Summary:	Gion theme for GNOME 2 environment
 Summary(pl.UTF-8):	Motyw Gion dla środowiska GNOME 2
 Group:		Themes
-Requires:	%{name} = %{version}-%{release}
 
 %description Gion
 Gion theme for GNOME 2 environment.
@@ -71,7 +74,6 @@ Motyw Gion dla środowiska GNOME 2.
 Summary:	Neu theme for GNOME 2 environment
 Summary(pl.UTF-8):	Motyw Neu dla środowiska GNOME 2
 Group:		Themes
-Requires:	%{name} = %{version}-%{release}
 
 %description Neu
 Neu theme for GNOME 2 environment.
@@ -83,7 +85,6 @@ Motyw Neu dla środowiska GNOME 2.
 Summary:	Unity theme for GNOME 2 environment
 Summary(pl.UTF-8):	Motyw Unity dla środowiska GNOME 2
 Group:		Themes
-Requires:	%{name} = %{version}-%{release}
 
 %description Unity
 Unity theme for GNOME 2 environment.
@@ -95,7 +96,6 @@ Motyw Unity dla środowiska GNOME 2.
 Summary:	GNOME Alternative theme for GNOME 2 environment
 Summary(pl.UTF-8):	Motyw GNOME Alternative dla środowiska GNOME 2
 Group:		Themes
-Requires:	%{name} = %{version}-%{release}
 
 %description gnome-alternative
 GNOME Alternative theme for GNOME 2 environment.
@@ -123,9 +123,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-for dir in Foxtrot Gion Neu gnome-alternative
-do
-    gtk-update-icon-cache -ft $RPM_BUILD_ROOT%{_iconsdir}/$dir
+for dir in Foxtrot Gion Neu gnome-alternative; do
+	gtk-update-icon-cache -ft $RPM_BUILD_ROOT%{_iconsdir}/$dir
 done
 
 %clean
